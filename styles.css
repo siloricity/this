@@ -1,0 +1,17 @@
+body {
+    background-color: #1e394d;
+    color: white;
+    font-family: "Exo", sans-serif;
+    font-size: 400%;
+    }
+.center	{text-align: center;}
+.right	{
+    font-size: 50%;
+    line-height: 0px;
+    text-align: right;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin-right:10px;
+    }
+a:link, a:visited, a:hover, a:active {color: white;}

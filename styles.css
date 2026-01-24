@@ -10,10 +10,10 @@ a:link, a:visited, a:hover, a:active {color: white;}
     font-size: 50%;
     line-height: 0px;
     text-align: right;
-    position:fixed;
-    bottom:0;
-    right:0;
-    margin-right:10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
     }
 .midbox {
     background-color: #4c6a7f;
@@ -24,7 +24,13 @@ a:link, a:visited, a:hover, a:active {color: white;}
     margin-right: 20%;
     margin-left: 20%;
     border-color: #d5e6f2;
-    border-style:solid;
+    border-style: solid;
     border-width: 15px;
     border-radius: 20px;
 }
+.heading {
+    line-height: 0px;
+    margin-bottom: 5%;
+    font-weight: normal;
+}
+.blog {font-size: 40%;}

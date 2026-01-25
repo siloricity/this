@@ -41,6 +41,12 @@ a:link, a:visited, a:hover, a:active {color: white;}
     margin-left: 20%;
 }
 .blog {font-size: 40%;}
+.blogsub {
+    text-align: center;
+    font-size: 120%;
+    font-weight: normal;
+    margin-bottom: 1%;
+}
 .blogline {
     height: 0px;
     padding: 0%;

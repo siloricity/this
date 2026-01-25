@@ -58,3 +58,18 @@ a:link, a:visited, a:hover, a:active {color: white;}
     border-radius: 2px;
     border-width: 2px;
 }
+.container {
+    display: grid;
+    background-color: #4c6a7f;
+    grid-template-columns: 300px auto;
+    text-align: left;
+    font-size: 70%;
+    gap: 20px;
+    border-style: solid;
+    border-color: #d5e6f2;
+    border-width: 15px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.container img {width: 100%;}
+.inside {font-size: 50%;}

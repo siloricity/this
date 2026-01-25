@@ -33,4 +33,22 @@ a:link, a:visited, a:hover, a:active {color: white;}
     margin-bottom: 5%;
     font-weight: normal;
 }
+.date {
+    font-size: 50%;
+    line-height: 0px;
+    margin-bottom: 1%;
+    text-align: left;
+    margin-left: 20%;
+}
 .blog {font-size: 40%;}
+.blogline {
+    height: 0px;
+    padding: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 2px;
+    border-width: 2px;
+}

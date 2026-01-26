@@ -73,3 +73,7 @@ a:link, a:visited, a:hover, a:active {color: white;}
 }
 .container img {width: 100%;}
 .inside {font-size: 50%;}
+.listgrid {
+    display: grid;
+    grid-template-columns: 200px auto;
+}

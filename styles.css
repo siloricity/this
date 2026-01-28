@@ -29,8 +29,8 @@ a:link, a:visited, a:hover, a:active {color: white;}
     border-radius: 20px;
 }
 .heading {
-    line-height: 0px;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
+    margin-top: 0%;
     font-weight: normal;
 }
 .date {

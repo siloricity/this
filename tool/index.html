@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Pure Calculator</title>
+	<meta property="og:title" content="calculator">
+	<meta property="og:site_name" content="siloricity's web site">
+	<meta content="this is a calculator" property="og:description" />
+    <meta property="og:url" content="https://siloricity.github.io/this/">
+	<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<html>
+  <body>
+    <div class="center">
+        <p style="margin: 1.5%;">Calculate Shiny Count</p>
+        <div class="midbox">
+            <form>
+                <label for="a">Your Score</label><br>
+                <input  type="number" id="a" value="0" /><br>
+                <label for="b">Note Count (Total Notes in Chart)</label><br>
+                <input type="number" id="b" value="0" />
+                <button id="hitme">Hit me</button>
+            </form>
+        </div>
+        <div style="font-size: 50%; margin-top: 20px;">
+            Shiny Count: <span id="output"></span><br>
+            <span id="output2"></span><br>
+            <span id="output3"></span>
+        </div>
+        <script>
+            function getInput(id) {
+                const element = document.getElementById(id);
+                return parseInt(element.value);
+            }
+
+            function setOutput(id, value) {
+                const element = document.getElementById(id);
+                element.innerHTML = value;
+            }
+
+            document.getElementById("hitme").addEventListener("click", (e) => {
+                e.preventDefault();
+                const a = getInput("a");
+                const b = getInput("b");
+                let inc = 5000000/b
+                let bits = Math.floor(a/inc)
+                let min = Math.floor(inc*bits)
+                let shiny = a-min
+                let acc = shiny-b
+                let perc1 = shiny/b*1000
+                let perc2 = Math.round(perc1)
+                let perc = perc2/10+"%"
+                if (shiny > b) {setOutput("output", "wtf")}
+                else{
+                    setOutput("output", shiny);
+                    setOutput("output2","Nice! this is "+acc)
+                    setOutput("output3","You got "+perc)
+                }
+            });
+            
+        </script>
+        <div style="font-size: 50%; margin-top: 50px;">
+            You ever want to see what your accuracy was, but you forgot to screenshot the shiny pures?
+        </div>
+    </div>
+  </body>
+</html>

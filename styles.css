@@ -77,3 +77,17 @@ a:link, a:visited, a:hover, a:active {color: white;}
     display: grid;
     grid-template-columns: 200px auto;
 }
+.calc {
+    margin:0px;
+    line-height: 100%;
+}
+input {
+    height: 30px;
+    color:white;
+    font-family:monospace;
+    text-align: center;
+    font-size: 25px;
+    background-color: #1e394d;
+    border-color: transparent;
+    border-radius: 10px;
+}

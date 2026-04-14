@@ -91,3 +91,7 @@ input {
     border-color: transparent;
     border-radius: 10px;
 }
+.hover {
+    text-decoration: underline dashed;
+    display: inline;
+}

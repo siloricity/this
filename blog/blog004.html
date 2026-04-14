@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>horrible code. optimize time!</title>
+	<meta property="og:title" content="Blog #4">
+	<meta property="og:site_name" content="siloricity's web site">
+	<meta content="horrible code. optimize time!" property="og:description" />
+    <meta property="og:url" content="https://siloricity.github.io/this/">
+    <meta content="../assets/blog/blog004-2.png" property="og:image"/>
+    <meta content="https://raw.githubusercontent.com/siloricity/this/refs/heads/main/assets/blog/blog004-1.png" property="og:image"/>
+	<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+	<script src="../mystery-1.js"></script>
+	<div class="center">
+            <h5 class="heading">horrible code. optimize time!</h5>
+            <h5 class="date">2026 - 04 - 14</h5>
+            <div class="blogline"></div>
+        <div class="midbox blog">
+            <p>I've been learning coding / using Godot Engine for about a year and a half now, and I <em>finally</em>
+            figured out how you're <em>actually</em> supposed to organise a game.<br></p>
+            <p><i>bobby's bounce</i> is a game I've been working on for about 4 months.
+            The game is a level-based platformer with controls similar to Angry Birds.</p>
+            <div class="center"><img src="../assets/blog/blog004-1.png" width="50%" alt="bobby's bounce cover art" /></div>
+            <p>This is my third game. Well, maybe second because my first was just a tutorial resprite. And shit,
+            maybe it is my first game because my second game wasn't really a game. Damn!</p>
+            <p>Anyway, to get to the point of the title. This is super embarassing ngl.<br>
+            Each level had their own script attached to it, with logic manually copied and pasted
+            onto each one.<br>
+            The logic was the exact same...</p>
+            <p>...<br>Examples of said logic include:
+                <ul><li>Intro text fading animation</li>
+                    <li>Level complete animation</li>
+                    <li>Retry timer</li>
+                    <li>Spawning preview ghosts</li>
+                    <li>Managing checkpoint progress</li>
+                    <li>Etc.</li></ul>
+            Having all of that logic pasted across every level's script is
+            a huge waste of space, and time.<br>
+            It was fine at first, when I had about eight levels, but then
+            I finally woke up and realise that this code management is diabolical.<br>
+            If I want to have like 40 stages, this game is never going to come out if I
+            keep creating levels like this.</p>
+            <p>So then, what did I do to fix this? REFACTORRRR!!!!!!<br>
+            The big idea behind the refactor is to remove all the repetitive code from each level,
+            and move it to a scene that has the logic in it's own script. The scene can then be
+            instanced as a child node into each level providing logic to each of them.<br>
+            (If none of this makes sense then the rest of this blog is not for you. read it anyway though..)</p>
+            <p>The biggest hurdle in my dumb brain was how I can access certain nodes' values
+            and functions if the script was not on the very most parent node of the scene.<br>
+            The solution to this is to use variables.<br>
+            That probably sounds obvious but I'm stupid (at least I'm not dumb, though)<br>
+            In the instanced script, instead of using hard coded paths for nodes, you can
+            replace them with variables that you change in the level scene.<br>
+            <div class="hover" title="&quot;In godot&quot; as if I've used anything else hhh">In Godot</div>
+            I like to use @export variables. You define the variable's type/class,
+            and they let you easily drag and drop the nodes as paths in the editor.<br>
+            And then the code from the instance magically works! it's honestly magic.</p>
+            <p>After figuring this out, I even managed to decrease one of the level's scripts by 80% !!
+            <div class="center"><img src="../assets/blog/blog004-2.png" width="50%" alt="2 lines added, 40 removed" /></div></p>
+            <p>It was extremely satisfying to apply that change and see the number.
+            It made me feel a lot better lmao. You may judge me for terrible code,
+            but at least I figured it out.<br>
+            By the way, 10 level demo for bobby's bounce out now👉<a href="https://siloricity0.itch.io/bounce">https://siloricity0.itch.io/bounce</a>
+            </p>
+        </div>
+    </div>
+    <img
+        style="position:fixed;
+            bottom:0;
+            margin:10px"
+        src="../assets/silo_white.svg"
+        height="5%"
+        alt="logo"
+    />
+</body>
+</html>
